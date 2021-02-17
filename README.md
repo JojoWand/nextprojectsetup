@@ -42,7 +42,7 @@ yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
   "plugin:@typescript-eslint/recommended",
   "prettier/@typescript-eslint",
   "prettier/airbnb",
-  "prettier/react",
+  "prettier/react"
 },
 "plugins": {
   "prettier"
