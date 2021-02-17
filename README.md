@@ -67,9 +67,6 @@ yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
 - CREATE .editorconfig AND change:
   - end_of_line = lf
   - final_newline = true
-## Babel
-- presets
-  - ["next/babel"]
 ## Styled Components
 ### bash
 ```console
@@ -93,6 +90,12 @@ yarn add -D @types/styled-components
 ```console
   yarn add @babel/core -D
 ```
+### Preset
+```javascript
+{
+  "presets": ["next/babel"]
+}
+```
 ### Inline React SVG
 #### Bash
 ```console
@@ -113,7 +116,7 @@ yarn add -D @types/styled-components
         "root": ["./"],
         "alias": {
           "@public": "./public",
-          "@components": "./src/components
+          "@components": "./src/components",
           "~": "./src"
         }
       }
