@@ -2,8 +2,10 @@
 
 ## Create The Project
 ### Bash
-- yarn create next-app app-name
-- cd app-name
+```console
+yarn create next-app app-name
+cd app-name
+```
 
 ## Delete Default Files
 - DELETE public/* FILES
@@ -15,32 +17,43 @@
 
 ## Add Typescript
 ### Bash
-- yarn add -D typescript @types/react @types/node
-- yarn dev (to create .tsconfig)
-- Shutdown dev server (ctrl + c)
+```console
+yarn add -D typescript @types/react @types/node
+yarn dev (to create .tsconfig)
+Shutdown dev server (ctrl + c)
+```
 
 ## Add Eslint
 ### Bash
-- yarn add eslint -D
-- yarn eslint --init (Install depedencies with npm)
+```console
+yarn add eslint -D
+yarn eslint --init (Install depedencies with npm)
+```
 ### NPM FILES
 - DELETE package-lock
 ### Bash
-- yarn (Map depedencies)
-- yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
-
+```console
+yarn
+yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
+```
 ## Add eslint configs:
-- extend:
-	- "plugin:@typescript-eslint/recommended",
-	- "prettier/@typescript-eslint",
-	- "prettier/airbnb",
-	- "prettier/react",
-- plugins:
-  - "prettier",
-- rules:
-  - "prettier/prettier": "error",
-  - "noImplicitAny": [true, "error"],
-  - "react/prop-types": 0
+```json
+"extend": {
+  "plugin:@typescript-eslint/recommended",
+  "prettier/@typescript-eslint",
+  "prettier/airbnb",
+  "prettier/react",
+},
+"plugins": {
+  "prettier"
+},
+"rules": {
+  "prettier/prettier": "error",
+  "noImplicitAny": [true, "error"],
+  "react/prop-types": 0
+}
+```
+
 ## Add eslintignore
 - CREATE .eslintignore AND add:
   - node_modules
@@ -58,21 +71,35 @@
   - ["next/babel"]
 ## Styled Components
 ### bash
-- yarn add styled-components
-- yarn add -D @types/styled-components
+```console
+yarn add styled-components
+yarn add -D @types/styled-components
+```
 ### Add babel config
-- Plugins
-  - ["styled-components", { "ssr": true }]
-  COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
+```json
+  "plugins": {
+    ["styled-components", { "ssr": true }]
+  }
+```
+### COPY FILES
+  - add _app.tsx
+  - add _document.tsx
+
 ## Babel
 ### Bash
-- yarn add @babel/core -D
+```console
+  yarn add @babel/core -D
+```
 ### Inline React SVG
 #### Bash
-- yarn add babel-plugin-inline-react-svg -D
+```console
+  yarn add babel-plugin-inline-react-svg -D
+```
 ### Module Resolver
 #### Bash
-- yarn add babel-plugin-module-resolver -D
+```console
+  yarn add babel-plugin-module-resolver -D
+```
 #### Add Plugin
 ```json
 {
