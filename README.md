@@ -1,0 +1,36 @@
+yarn create next-app app-name
+cd app-name
+DELETE public/* FILES, DELETE README.md FILE, styles FOLDER
+DELETE pages folder, COPY FROM setup -> src folder and PASTE on root
+yarn add -D typescript @types/react @types/node
+yarn dev
+Shutdown dev server, ctrl + C
+yarn add eslint -D
+yarn eslint --init
+DELETE package-lock
+yarn
+yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
+add eslint configs:
+extend:
+	"plugin:@typescript-eslint/recommended",
+	"prettier/@typescript-eslint",
+	"prettier/airbnb",
+	"prettier/react",
+plugins:
+	"prettier",
+rules:
+	"prettier/prettier": "error",
+    	"noImplicitAny": [true, "error"],
+	"react/prop-types": 0
+CREATE .eslintignore AND add:
+node_modules
+.next
+/*.js
+GENERATE A .prettierrc AND add:
+  "arrowParens": "avoid"
+GENERATE .editorconfig
+change end of line to lf, final newline = true
+yarn add styled-components ,add types
+COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
+
+git init
