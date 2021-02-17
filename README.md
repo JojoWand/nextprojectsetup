@@ -37,7 +37,7 @@ yarn
 yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
 ```
 ## Add eslint configs:
-```json
+```javascript
 {
 "extend": {
   "plugin:@typescript-eslint/recommended",
@@ -77,7 +77,7 @@ yarn add styled-components
 yarn add -D @types/styled-components
 ```
 ### Add babel config
-```json
+```javascript
 {
   "plugins": {
     ["styled-components", { "ssr": true }]
@@ -104,7 +104,7 @@ yarn add -D @types/styled-components
   yarn add babel-plugin-module-resolver -D
 ```
 #### Add Plugin
-```json
+```javascript
 {
   "plugins": [
     [
@@ -122,7 +122,7 @@ yarn add -D @types/styled-components
 }
 ```
 #### Add Typescript Paths
-```json
+```javascript
 "paths": {
   "@public/*": ["./public/*"],
   "@components/*": ["./src/components/*"],
@@ -131,7 +131,7 @@ yarn add -D @types/styled-components
 ```
 
 #### Add Pathintellisense Config
-```json
+```javascript
 "path-intellisense.mappings": {
   "@public": "${workspaceFolder}/public",
   "@components": "${workspaceFolder}/src/components
