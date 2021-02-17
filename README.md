@@ -29,7 +29,7 @@
 - yarn (Map depedencies)
 - yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
 
-## add eslint configs:
+## Add eslint configs:
 - extend:
 	- "plugin:@typescript-eslint/recommended",
 	- "prettier/@typescript-eslint",
@@ -41,7 +41,7 @@
   - "prettier/prettier": "error",
   - "noImplicitAny": [true, "error"],
   - "react/prop-types": 0
-## add eslintignore
+## Add eslintignore
 - CREATE .eslintignore AND add:
   - node_modules
   - .next
@@ -53,13 +53,14 @@
 - CREATE .editorconfig AND change:
   - end_of_line = lf
   - final_newline = true
-
+## Babel
+- presets
+  - ["next/babel"]
 ## Styled Components
- ### bash
- - yarn add styled-components
- - yarn add -D @types/styled-components
- ### Add babel config
- 
+### bash
+- yarn add styled-components
+- yarn add -D @types/styled-components
+### Add babel config
+- Plugins
+  - ["styled-components", { "ssr": true }]
   COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
-
-git init
