@@ -1,36 +1,65 @@
-yarn create next-app app-name
-cd app-name
-DELETE public/* FILES, DELETE README.md FILE, styles FOLDER
-DELETE pages folder, COPY FROM setup -> src folder and PASTE on root
-yarn add -D typescript @types/react @types/node
-yarn dev
-Shutdown dev server, ctrl + C
-yarn add eslint -D
-yarn eslint --init
-DELETE package-lock
-yarn
-yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
-add eslint configs:
-extend:
-	"plugin:@typescript-eslint/recommended",
-	"prettier/@typescript-eslint",
-	"prettier/airbnb",
-	"prettier/react",
-plugins:
-	"prettier",
-rules:
-	"prettier/prettier": "error",
-    	"noImplicitAny": [true, "error"],
-	"react/prop-types": 0
-CREATE .eslintignore AND add:
-node_modules
-.next
-/*.js
-GENERATE A .prettierrc AND add:
-  "arrowParens": "avoid"
-GENERATE .editorconfig
-change end of line to lf, final newline = true
-yarn add styled-components ,add types
-COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
+# Setup
+
+## Create The Project
+### Bash
+- yarn create next-app app-name
+- cd app-name
+
+## Delete Default Files
+- DELETE public/* FILES
+- DELETE README.md FILE
+- DELETE styles FOLDER
+- DELETE pages FOLDER
+## NEW FILES
+- COPY src FOLDER AND PASTE ON root
+
+## Add Typescript
+### Bash
+- yarn add -D typescript @types/react @types/node
+- yarn dev (to create .tsconfig)
+- Shutdown dev server (ctrl + c)
+
+## Add Eslint
+### Bash
+- yarn add eslint -D
+- yarn eslint --init (Install depedencies with npm)
+### NPM FILES
+- DELETE package-lock
+### Bash
+- yarn (Map depedencies)
+- yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
+
+## add eslint configs:
+- extend:
+	- "plugin:@typescript-eslint/recommended",
+	- "prettier/@typescript-eslint",
+	- "prettier/airbnb",
+	- "prettier/react",
+- plugins:
+  - "prettier",
+- rules:
+  - "prettier/prettier": "error",
+  - "noImplicitAny": [true, "error"],
+  - "react/prop-types": 0
+## add eslintignore
+- CREATE .eslintignore AND add:
+  - node_modules
+  - .next
+  - /*.js
+## Add prettierrc:
+- CREATE .prettierrc AND add:
+  - "arrowParens": "avoid"
+## Add editorconfig:
+- CREATE .editorconfig AND change:
+  - end_of_line = lf
+  - final_newline = true
+
+## Styled Components
+ ### bash
+ - yarn add styled-components
+ - yarn add -D @types/styled-components
+ ### Add babel config
+ 
+  COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
 
 git init
