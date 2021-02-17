@@ -38,6 +38,7 @@ yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
 ```
 ## Add eslint configs:
 ```json
+{
 "extend": {
   "plugin:@typescript-eslint/recommended",
   "prettier/@typescript-eslint",
@@ -51,7 +52,7 @@ yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
   "prettier/prettier": "error",
   "noImplicitAny": [true, "error"],
   "react/prop-types": 0
-}
+}}
 ```
 
 ## Add eslintignore
@@ -77,9 +78,11 @@ yarn add -D @types/styled-components
 ```
 ### Add babel config
 ```json
+{
   "plugins": {
     ["styled-components", { "ssr": true }]
-  }
+  }`
+}
 ```
 ### COPY FILES
   - add _app.tsx
