@@ -64,3 +64,47 @@
 - Plugins
   - ["styled-components", { "ssr": true }]
   COPY babel config AND src Folder FROM template, DELETE pages folder AND styles folder
+## Babel
+### Bash
+- yarn add @babel/core -D
+### Inline React SVG
+#### Bash
+- yarn add babel-plugin-inline-react-svg -D
+### Module Resolver
+#### Bash
+- yarn add babel-plugin-module-resolver -D
+#### Add Plugin
+```json
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@public": "./public",
+          "@components": "./src/components
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}
+```
+#### Add Typescript Paths
+```json
+"paths": {
+  "@public/*": ["./public/*"],
+  "@components/*": ["./src/components/*"],
+  "~*": ["./src/*"]
+}
+```
+
+#### Add Pathintellisense Config
+```json
+"path-intellisense.mappings": {
+  "@public": "${workspaceFolder}/public",
+  "@components": "${workspaceFolder}/src/components
+  "~": "${workspaceFolder}/src"
+}
+```
